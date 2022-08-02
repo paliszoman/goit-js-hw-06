@@ -19,14 +19,10 @@ gallerySource.style.flexDirection = 'column';
 gallerySource.style.justifyContent = 'space-between';
 gallerySource.style.alignItems = 'center';
 
-
 let insideGalleryList = images
   .map(({ url, alt }) => `<li class="list-item"><img src=${url} alt=${alt}></li>`)
   
+gallerySource.insertAdjacentHTML('afterbegin', insideGalleryList)
 
 
-for (let each of insideGalleryList) {
-  gallerySource.insertAdjacentHTML('afterbegin', each)
-
-}
 console.log(insideGalleryList)
