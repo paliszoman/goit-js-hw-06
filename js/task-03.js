@@ -20,9 +20,8 @@ gallerySource.style.justifyContent = 'space-between';
 gallerySource.style.alignItems = 'center';
 
 let insideGalleryList = images
-  .map(({ url, alt }) => `<li class="list-item"><img src=${url} alt=${alt}></li>`)
+  .map(({ url, alt }) => `<li class="list-item"><img src=${url} alt="${alt}"></li>`)
   
-gallerySource.insertAdjacentHTML('afterbegin', insideGalleryList)
+gallerySource.insertAdjacentHTML('afterbegin', insideGalleryList.join(" "))
 
 
-console.log(insideGalleryList)
